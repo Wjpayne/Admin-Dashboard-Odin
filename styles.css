@@ -14,7 +14,7 @@
 
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   background: var(--bg-main);
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
@@ -44,8 +44,7 @@ i {
   background: var(--bg-sidebar);
   color: white;
   padding: 1.5rem;
-  min-height: 100svh;
-  align-self: stretch;
+
 }
 
 .nav ul {
@@ -61,12 +60,12 @@ i {
   display: flex;
   align-items: center;
   gap: 8px;
-
   padding: 10px 16px;
   width: 100%;
-
   text-decoration: none;
   color: inherit;
+  touch-action: manipulation;
+  min-height: 44px; 
 }
 
 .nav a {
@@ -189,9 +188,6 @@ i {
   cursor: pointer;
   color: var(--text-dark);
 }
-
-
-
 
 /* Announcements */
 .announcements h3,
@@ -345,4 +341,9 @@ i {
   .projects {
     order: 1;
   }
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
 }
