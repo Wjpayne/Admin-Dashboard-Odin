@@ -183,6 +183,16 @@ i {
   margin-bottom: 2rem;
 }
 
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-dark);
+}
+
+
+
+
 /* Announcements */
 .announcements h3,
 .trending h3 {
