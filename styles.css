@@ -32,7 +32,7 @@ i {
   display: grid;
   grid-template-columns: 250px 1fr;
   grid-template-rows: auto 1fr;
-  height: 100vh;
+  min-height: 100svh;
 }
 
 /* Sidebar & Navigation */
@@ -42,7 +42,8 @@ i {
   background: var(--bg-sidebar);
   color: white;
   padding: 1.5rem;
-  height: 100vh;
+  min-height: 100svh;
+  align-self: stretch;
 }
 
 .nav ul {
@@ -254,9 +255,8 @@ i {
 @media (max-width: 768px) {
   .dashboard {
     grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
-    height: auto;
-    min-height: 100vh;
+    grid-template-rows: auto 1fr minmax(60px, auto);
+    
   }
 
   /* Sidebar becomes bottom nav */
@@ -265,6 +265,7 @@ i {
     grid-column: 1;
     height: auto;
     padding: 0.5rem;
+    min-height: 10%;
   }
 
   .sidebar .logo {
